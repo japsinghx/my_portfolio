@@ -8,8 +8,9 @@ const Experience = () => {
             type: "Austin, Texas • Full-time",
             description: [
                 "Owned end-to-end full-stack development on a critical internal platform team using Spring Boot (backend) and React.js (frontend)",
-                "Delivered secure, scalable features that empowered engineering and operations teams to manage resources efficiently",
-                "Introduced and automated secure authentication workflows, streamlining access to production-critical resources, and enabling seamless collaboration across teams."
+                "Delivered scalable features that empowered engineering and operations teams to manage resources efficiently",
+                "Introduced and automated secure authentication workflows, streamlining access to production-critical resources.",
+                "Drove rapid delivery and high-quality code by adopting AI-powered development workflows using LLM tools such as Claude and ChatGPT."
             ]
         },
         {
@@ -44,7 +45,7 @@ const Experience = () => {
     ];
 
     return (
-        <section className="max-w-3xl px-12 py-12" id="experience">
+        <section className="max-w-3xl px-12 py-4" id="experience">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-12">
                 Work Experience
             </h2>

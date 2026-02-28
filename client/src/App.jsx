@@ -1,6 +1,6 @@
 // Import BrowserRouter to enable routing - required for Link components
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavBar from './components/navbar'
+import NavBar from './components/NavBar'
 import Timeline from './components/Timeline';
 import Introduction from './Introduction';
 import Experience from './pages/Experience';
