@@ -4,9 +4,8 @@ const Projects = () => {
             date: "2026",
             title: "Breeze",
             description: [
-                "Built a full-stack internal platform using React.js and Spring Boot for managing engineering resources",
-                "Implemented secure authentication workflows and role-based access control",
-                "Reduced resource provisioning time by 60% through automated workflows"
+                "Independently scoped, built, and deployed a scalable health application serving up to 4 million locations — making every product, architecture, and reliability decision solo, from API integration design to cloud configurations through Google Cloud Platform and Vercel.",
+                "Iterated rapidly — validating changes before release, monitoring system behavior in production, and prioritizing improvements based on actual impact rather than assumptions."
             ],
             technologies: ["JavaScript", "Node.js", "Swift", "Google Cloud Platform", "GitHub",
                 "Vercel", "CI/CD", "iOS Engineering"
