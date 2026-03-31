@@ -12,20 +12,21 @@ const Projects = () => {
             ],
             links: [
                 { label: "Website", url: "https://www.breeze.earth/" },
-                { label: "Download iOS App", url: "https://apps.apple.com/us/app/breeze-aqi-and-allergies/id6757069490" }
+                { label: "Download iOS App", url: "https://apps.apple.com/us/app/breeze-aqi-and-allergies/id6757069490" },
+                { label: "Documentation", url: "https://japsinghx-breeze-ios-25-65.mintlify.app/" }
             ]
         }
     ];
 
     return (
-        <section className="max-w-3xl px-12 py-24" id="projects">
+        <section className="max-w-3xl mx-auto px-6 md:px-12 py-16 md:py-24" id="projects">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-12">
                 Projects
             </h2>
 
             <div className="space-y-8">
                 {projects.map((project, index) => (
-                    <div key={index} className="grid grid-cols-[200px_1fr] gap-8 items-start">
+                    <div key={index} className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-8 items-start">
                         {/* Date */}
                         <div className="text-gray-400 dark:text-gray-500 text-sm pt-1">
                             {project.date}

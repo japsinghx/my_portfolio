@@ -1,6 +1,6 @@
 const Introduction = () => {
     return (
-        <section className="max-w-3xl px-12 pt-24 pb-12">
+        <section className="max-w-3xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-12">
             {/* Header */}
             <div className="mb-16">
                 <h1 className="text-4xl font-normal text-gray-900 dark:text-gray-100 mb-1">

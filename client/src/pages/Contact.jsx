@@ -15,7 +15,7 @@ const Contact = () => {
     ];
 
     return (
-        <section className="max-w-3xl px-12 py-24">
+        <section className="max-w-3xl mx-auto px-6 md:px-12 py-16 md:py-24">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-12">
                 Contact
             </h2>
