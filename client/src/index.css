@@ -1,30 +1,278 @@
 /* Import Tailwind CSS - v4 uses single import instead of @tailwind directives */
 @import "tailwindcss";
 
-/* Clean, minimal typography */
+/* ===== WINDOWS 2000 THEME ===== */
+
+:root {
+  /* Core Win2K palette */
+  --color-win-bg:        #d4d0c8;
+  --color-win-surface:   #ffffff;
+  --color-win-titlebar:  #0a246a;
+  --color-win-titletext: #ffffff;
+  --color-win-accent:    #1e5bd8;
+  --color-win-border-light: #ffffff;
+  --color-win-border-dark:  #808080;
+  --color-win-border-shadow: #404040;
+  --color-win-taskbar:   #c0c0c0;
+  --color-win-text:      #000000;
+  --color-win-link:      #0000ff;
+  --color-win-link-visited: #800080;
+  --color-win-select:    #0a246a;
+  --color-win-select-text: #ffffff;
+}
+
+/* Win2K desktop background */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  letter-spacing: -0.01em;
-  background-color: #fafafa;
+  font-family: 'Tahoma', 'Verdana', 'Arial', sans-serif;
+  font-size: 11px;
+  background-color: var(--color-win-bg);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0,0,0,0.015) 1px,
+      rgba(0,0,0,0.015) 2px
+    );
+  color: var(--color-win-text);
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  cursor: default;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #0a0a0a;
-  }
+/* ===== WIN2K BUTTON ===== */
+.win-btn {
+  background-color: var(--color-win-bg);
+  border-top: 2px solid var(--color-win-border-light);
+  border-left: 2px solid var(--color-win-border-light);
+  border-right: 2px solid var(--color-win-border-shadow);
+  border-bottom: 2px solid var(--color-win-border-shadow);
+  padding: 2px 12px;
+  font-family: 'Tahoma', 'Verdana', sans-serif;
+  font-size: 11px;
+  color: var(--color-win-text);
+  cursor: pointer;
+  min-width: 70px;
+  text-align: center;
+  user-select: none;
+}
+.win-btn:active {
+  border-top: 2px solid var(--color-win-border-shadow);
+  border-left: 2px solid var(--color-win-border-shadow);
+  border-right: 2px solid var(--color-win-border-light);
+  border-bottom: 2px solid var(--color-win-border-light);
+}
+.win-btn:focus {
+  outline: 1px dotted #000;
+  outline-offset: -4px;
 }
 
-/* Custom component classes - reusable styles you can apply anywhere */
+/* ===== WIN2K WINDOW ===== */
+.win-window {
+  background-color: var(--color-win-bg);
+  border-top: 2px solid var(--color-win-border-light);
+  border-left: 2px solid var(--color-win-border-light);
+  border-right: 2px solid var(--color-win-border-shadow);
+  border-bottom: 2px solid var(--color-win-border-shadow);
+  box-shadow: 2px 2px 0px var(--color-win-border-shadow);
+}
+
+.win-inset {
+  border-top: 2px solid var(--color-win-border-dark);
+  border-left: 2px solid var(--color-win-border-dark);
+  border-right: 2px solid var(--color-win-border-light);
+  border-bottom: 2px solid var(--color-win-border-light);
+  background-color: var(--color-win-surface);
+}
+
+/* ===== TITLE BAR ===== */
+.win-titlebar {
+  background: linear-gradient(90deg, #0a246a 0%, #1e5bd8 60%, #6fa8dc 100%);
+  padding: 3px 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+}
+.win-titlebar-text {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 11px;
+  flex: 1;
+  font-family: 'Tahoma', sans-serif;
+}
+.win-titlebar-btn {
+  width: 16px;
+  height: 14px;
+  background-color: #c0c0c0;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.win-titlebar-btn:active {
+  border-top: 1px solid #404040;
+  border-left: 1px solid #404040;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* ===== MENU BAR ===== */
+.win-menubar {
+  background-color: var(--color-win-bg);
+  padding: 2px 4px;
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--color-win-border-dark);
+}
+.win-menu-item {
+  padding: 2px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.win-menu-item:hover {
+  background-color: var(--color-win-select);
+  color: var(--color-win-select-text);
+}
+
+/* ===== TASKBAR ===== */
+.win-taskbar {
+  background-color: var(--color-win-taskbar);
+  border-top: 2px solid var(--color-win-border-light);
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  gap: 4px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.win-start-btn {
+  background: linear-gradient(180deg, #d4d0c8 0%, #b0ae9f 100%);
+  border-top: 2px solid var(--color-win-border-light);
+  border-left: 2px solid var(--color-win-border-light);
+  border-right: 2px solid var(--color-win-border-shadow);
+  border-bottom: 2px solid var(--color-win-border-shadow);
+  padding: 2px 8px;
+  font-weight: bold;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  font-family: 'Tahoma', sans-serif;
+}
+
+/* ===== STATUS BAR ===== */
+.win-statusbar {
+  background-color: var(--color-win-bg);
+  border-top: 2px solid var(--color-win-border-dark);
+  padding: 2px 6px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== TABLE STYLES ===== */
+.win-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 11px;
+}
+.win-table th {
+  background-color: var(--color-win-bg);
+  border: 1px solid var(--color-win-border-dark);
+  padding: 3px 8px;
+  text-align: left;
+  font-weight: bold;
+}
+.win-table td {
+  border: 1px solid var(--color-win-border-dark);
+  padding: 3px 8px;
+  background-color: var(--color-win-surface);
+}
+.win-table tr:hover td {
+  background-color: var(--color-win-select);
+  color: var(--color-win-select-text);
+}
+
+/* ===== LINKS ===== */
+.win-link {
+  color: var(--color-win-link);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.win-link:hover {
+  color: #ff0000;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 16px; height: 16px; }
+::-webkit-scrollbar-track { background: var(--color-win-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-win-bg);
+  border-top: 2px solid var(--color-win-border-light);
+  border-left: 2px solid var(--color-win-border-light);
+  border-right: 2px solid var(--color-win-border-shadow);
+  border-bottom: 2px solid var(--color-win-border-shadow);
+}
+::-webkit-scrollbar-button {
+  background: var(--color-win-bg);
+  border-top: 2px solid var(--color-win-border-light);
+  border-left: 2px solid var(--color-win-border-light);
+  border-right: 2px solid var(--color-win-border-shadow);
+  border-bottom: 2px solid var(--color-win-border-shadow);
+  height: 16px;
+  width: 16px;
+}
+
+/* ===== INPUT ===== */
+.win-input {
+  border-top: 2px solid var(--color-win-border-dark);
+  border-left: 2px solid var(--color-win-border-dark);
+  border-right: 2px solid var(--color-win-border-light);
+  border-bottom: 2px solid var(--color-win-border-light);
+  background-color: var(--color-win-surface);
+  padding: 2px 4px;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 11px;
+  outline: none;
+}
+
+/* ===== SEPARATOR ===== */
+.win-separator {
+  border: none;
+  border-top: 1px solid var(--color-win-border-dark);
+  border-bottom: 1px solid var(--color-win-border-light);
+  margin: 4px 0;
+}
+
+/* ===== MARQUEE (classic!) ===== */
+marquee {
+  background: var(--color-win-titlebar);
+  color: #ffffff;
+  font-size: 11px;
+  padding: 2px 0;
+}
+
 @layer components {
-  /* Reusable button style - use class="btn-primary" on any button */
   .btn-primary {
-    @apply bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors;
-  }
-  
-  /* Consistent section spacing across all pages */
-  .section-container {
-    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+    @apply win-btn;
   }
 }
