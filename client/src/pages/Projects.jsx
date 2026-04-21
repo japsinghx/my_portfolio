@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Projects = () => {
     const projects = [
         {
@@ -53,18 +55,31 @@ const Projects = () => {
                                         <span className="font-normal text-gray-900 dark:text-gray-100">{project.title}</span>
                                         <span className="ml-2 inline-flex gap-2">
                                             {project.links.map((link, i) => (
-                                                <a
-                                                    key={i}
-                                                    href={link.url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="text-[#2997FF] hover:text-[#147CE5] transition-colors text-sm inline-flex items-center gap-0.5"
-                                                >
-                                                    {link.label}
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" className="w-3 h-3" style={{ verticalAlign: 'super' }} fill="currentColor">
-                                                        <path d="M11.5 3a.5.5 0 0 1 .5.5V9l-.01.102a.5.5 0 0 1-.98-.001L11 9V4.707l-6.647 6.647a.5.5 0 0 1-.707-.707L10.293 4H6a.5.5 0 0 1 0-1z"/>
-                                                    </svg>
-                                                </a>
+                                                link.url.startsWith("/") ? (
+                                                    <Link
+                                                        key={i}
+                                                        to={link.url}
+                                                        className="text-[#2997FF] hover:text-[#147CE5] transition-colors text-sm inline-flex items-center gap-0.5"
+                                                    >
+                                                        {link.label}
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" className="w-3 h-3" style={{ verticalAlign: 'super' }} fill="currentColor">
+                                                            <path d="M11.5 3a.5.5 0 0 1 .5.5V9l-.01.102a.5.5 0 0 1-.98-.001L11 9V4.707l-6.647 6.647a.5.5 0 0 1-.707-.707L10.293 4H6a.5.5 0 0 1 0-1z"/>
+                                                        </svg>
+                                                    </Link>
+                                                ) : (
+                                                    <a
+                                                        key={i}
+                                                        href={link.url}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-[#2997FF] hover:text-[#147CE5] transition-colors text-sm inline-flex items-center gap-0.5"
+                                                    >
+                                                        {link.label}
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" className="w-3 h-3" style={{ verticalAlign: 'super' }} fill="currentColor">
+                                                            <path d="M11.5 3a.5.5 0 0 1 .5.5V9l-.01.102a.5.5 0 0 1-.98-.001L11 9V4.707l-6.647 6.647a.5.5 0 0 1-.707-.707L10.293 4H6a.5.5 0 0 1 0-1z"/>
+                                                        </svg>
+                                                    </a>
+                                                )
                                             ))}
                                         </span>
                                     </div>
