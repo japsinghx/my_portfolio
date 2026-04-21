@@ -2,6 +2,19 @@ const Projects = () => {
     const projects = [
         {
             date: "2026",
+            title: "Flashback",
+            description: [
+                "Built an instant-camera iOS app that lets users digitally print their photos as film",
+                "Photos are stored entirely on-device — no accounts, no cloud, no third-party SDKs.",
+                "Designed around privacy-first principles: camera, location (city name only), and photo library access are used locally and never transmitted."
+            ],
+            technologies: ["Swift", "SwiftData", "iOS Engineering", "SwiftUI"],
+            links: [
+                { label: "Privacy Policy", url: "/flashback/privacy" }
+            ]
+        },
+        {
+            date: "2026",
             title: "Breeze",
             description: [
                 "Independently scoped, built, and deployed a scalable health application serving up to 4 million locations — making every product, architecture, and reliability decision solo, from API integration design to cloud configurations through Google Cloud Platform and Vercel.",

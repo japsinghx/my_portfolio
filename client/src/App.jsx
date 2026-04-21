@@ -6,6 +6,7 @@ import Introduction from './Introduction';
 import Experience from './pages/Experience';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
+import FlashbackPrivacy from './pages/FlashbackPrivacy';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/flashback/privacy" element={<FlashbackPrivacy />} />
           </Routes>
         </main>
       </div>

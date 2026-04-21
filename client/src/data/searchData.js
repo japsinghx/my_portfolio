@@ -42,6 +42,14 @@ export const searchItems = [
     // Projects
     {
         type: "project",
+        title: "Flashback",
+        subtitle: "Privacy-first instant-camera iOS app",
+        path: "/projects",
+        section: "Projects",
+        keywords: "Swift SwiftData SwiftUI iOS camera photo privacy on-device instant camera"
+    },
+    {
+        type: "project",
         title: "Breeze",
         subtitle: "Health application serving 4 million locations",
         path: "/projects",
